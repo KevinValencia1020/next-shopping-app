@@ -36,3 +36,7 @@ pnpm-debug.log*
 Thumbs.db
 .vscode/
 .idea/
+
+# Herramientas locales de desarrollo
+.claude/settings.local.json
+.tokensave/
