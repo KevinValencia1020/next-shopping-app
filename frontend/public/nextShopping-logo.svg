@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="bag" x1="20%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0" stop-color="#12C4F4"/>
+      <stop offset=".58" stop-color="#118BF4"/>
+      <stop offset="1" stop-color="#7A2CF3"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#08B9F5"/>
+      <stop offset="1" stop-color="#7932F3"/>
+    </linearGradient>
+    <linearGradient id="xgrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#078CFF"/>
+      <stop offset="1" stop-color="#7A32F4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ICON -->
+  <g>
+    <!-- motion trails -->
+    <g fill="none" stroke="#168CFF" stroke-linecap="round">
+      <path d="M260 430H405" stroke-width="30"/>
+      <path d="M215 505H390" stroke-width="30"/>
+      <path d="M250 580H385" stroke-width="30"/>
+      <path d="M175 505h30" stroke-width="30"/>
+    </g>
+
+    <!-- bag body -->
+    <path d="M405 310L735 270L820 335L855 665Q860 720 805 720H400Q350 720 355 665Z"
+          fill="url(#bag)"/>
+
+    <!-- right side depth -->
+    <path d="M735 270L820 335L855 665Q860 720 805 720H735Z"
+          fill="#185FE4" opacity=".34"/>
+
+    <!-- handle -->
+    <path d="M445 320V245C445 170 495 125 575 125C655 125 715 170 715 245V300"
+          fill="none" stroke="#0BB8F3" stroke-width="30" stroke-linecap="round"/>
+
+    <!-- BIG N -->
+    <path d="M330 700L370 345L655 545V410L735 395V700H660L425 530L410 700Z"
+          fill="#fff"/>
+  </g>
+
+  <!-- WORDMARK -->
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="900">
+    <!-- N -->
+    <path d="M135 925V770H185L270 865V770H320V925H270L185 830V925Z" fill="#fff"/>
+    <!-- E -->
+    <path d="M355 770H545V815H405V825H530V865H405V880H545V925H355Z" fill="#fff"/>
+    <!-- X -->
+    <path d="M585 770H645L695 830L745 770H805L725 850L805 925H745L695 870L645 925H585L665 850Z" fill="url(#xgrad)"/>
+    <!-- T -->
+    <path d="M835 770H1080V820H990V925H925V820H835Z" fill="#fff"/>
+  </g>
+
+  <!-- SHOPPING -->
+  <g>
+    <rect x="140" y="995" width="115" height="8" rx="4" fill="#0AAEF3"/>
+    <rect x="945" y="995" width="115" height="8" rx="4" fill="#7A32F3"/>
+    <text x="600" y="1025"
+          text-anchor="middle"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="62"
+          font-weight="600"
+          letter-spacing="20"
+          fill="url(#accent)">SHOPPING</text>
+  </g>
+</svg>
