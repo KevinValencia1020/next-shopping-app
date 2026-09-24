@@ -7,7 +7,7 @@ import prisma from '../lib/prisma.ts';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
-export const RegisterUser = async (req: Request, res: Response) => {
+export const registerUser = async (req: Request, res: Response) => {
   try {
     const { firstName, lastName, email, phone, password } = req.body;
 
