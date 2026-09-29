@@ -6,6 +6,7 @@ import { type Request, type Response } from 'express';
 import prisma from '../lib/prisma.ts';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
+import { JWT_SECRET } from '../lib/config.ts';
 
 export const registerUser = async (req: Request, res: Response) => {
   try {
@@ -38,9 +39,8 @@ export const registerUser = async (req: Request, res: Response) => {
         phone: true,
       }
     });
-
     
-    const token = jwt.sign({ id: newUser.id}, process.env.JWT_SECRET as string, { expiresIn: '1h' });
+    const token = jwt.sign({ id: newUser.id}, JWT_SECRET, { expiresIn: '1h' });
     
     res.cookie('token', token, { httpOnly: true, secure: process.env.NODE_ENV === 'production', maxAge: 60 * 60 * 1000 });
     
