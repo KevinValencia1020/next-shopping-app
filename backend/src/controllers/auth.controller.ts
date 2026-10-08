@@ -1,5 +1,5 @@
 /**
-    @file: authController.ts
+    @file: auth.controller.ts
     @description: Este archivo contiene el controlador de autenticacion para la aplicacion. Se encarga de manejar las solicitudes relacionadas con el registro de usuarios, incluyendo la creacion de nuevos usuarios en la base de datos, la verificacion de correos electrónicos duplicados, el hash de contraseñas y la generacion de tokens JWT para la autenticación.
 */
 import { type Request, type Response } from 'express';
