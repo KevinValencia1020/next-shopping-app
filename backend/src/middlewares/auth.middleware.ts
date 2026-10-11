@@ -1,8 +1,12 @@
+/**
+   @file: auth.middleware.ts
+   @description: Este archivo contiene el middleware de autenticación que verifica la validez del token JWT en las cookies de la solicitud. Si el token es válido, se asigna el ID del usuario al objeto req.user para que pueda ser utilizado en los controladores posteriores.
+ */
 import {type Request, type Response, type NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 import { JWT_SECRET } from '../lib/config.ts';
 
-const verificarJWT = (req: Request, res: Response, next: NextFunction) => {
+export const verificarJWT = (req: Request, res: Response, next: NextFunction) => {
   try {
     const tokenCookie = req.cookies.token;
     if (!tokenCookie) {
@@ -27,4 +31,3 @@ const verificarJWT = (req: Request, res: Response, next: NextFunction) => {
   }
 
 }
-export { verificarJWT };
