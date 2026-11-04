@@ -10,10 +10,10 @@ const nodeEnv = process.env.NODE_ENV ?? 'development';
 export const NODE_ENV = nodeEnv;
 
 const portEnv = process.env.PORT ?? '4000';
-if (!Number.isInteger(Number(portEnv)) || Number(portEnv) < 1 || Number(portEnv) > 65535) {
+const portNumber = Number(portEnv);
+if (!Number.isInteger(portNumber) || portNumber < 1 || portNumber > 65535) {
   throw new Error('El puerto debe ser un número entero entre 1 y 65535');
 }
-const portNumber = Number(portEnv);
 export const PORT = portNumber;
 
 const secret = process.env.JWT_SECRET;
