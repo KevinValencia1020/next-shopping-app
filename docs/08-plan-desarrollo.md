@@ -43,6 +43,7 @@ Sin esto, ninguna otra historia se puede probar de verdad.
 ### HU-06 — Buscar productos
 - Backend: `GET /api/productos` — búsqueda por nombre/marca/descripción, paginado por lotes de 20 (RNF-02)
 - Frontend: buscador en header, botón "Cargar más"
+- Frontend: sugerencias mientras se escribe — isla Client `SearchBox` dentro del Header (que sigue siendo Server), con debounce y TanStack Query (`queryKey` con el término); el `<form action="/buscar">` se mantiene como respaldo sin JavaScript. Backend: reutilizar `GET /api/productos` con parámetro `limit` (a confirmar al implementar)
 
 ### HU-07 — Ver detalle de producto
 - Backend: `GET /api/productos/:id`
