@@ -38,7 +38,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className='fixed bottom-0 w-full z-50 inset-x-0 md:hidden'>
+    <nav className='fixed bottom-0 w-full z-50 inset-x-0 lg:hidden'>
       <ul className='flex justify-around items-center w-full h-16 bg-primario-oscuro text-white'>
         {navItems.map((item) => {
           const isActive = pathname === item.href;

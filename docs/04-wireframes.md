@@ -18,6 +18,8 @@ Header fijo (logo + buscador), navbar inferior fijo (Home, Favoritos, Carrito, P
 
 Header en 2 niveles (cuenta, pedidos, carrito arriba; categorías principales abajo, sin sidebar fijo). Contenido a todo el ancho: favoritos y feed personalizado en grid de 4 columnas.
 
+**Cambio respecto al wireframe (implementación):** se eliminó el selector "Todos ▾" del buscador y el desplegable "Cuenta y Pedidos". En su lugar, "Hola, identifícate" es un enlace directo a `/login`, y "Mis Pedidos" queda como enlace independiente. Motivo: simplificar el header (sin estado ni menús desplegables en Fase 0).
+
 ---
 
 ### Detalle de producto

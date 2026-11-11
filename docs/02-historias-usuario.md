@@ -74,7 +74,7 @@
 - Debe funcionar aunque el texto coincida parcialmente (no solo exacto)
 - Si no hay resultados, se muestra un mensaje claro de "sin resultados"
 - Mientras el usuario escribe, el buscador muestra sugerencias de productos (máx. 5) a partir de un mínimo de caracteres, sin disparar una petición por cada tecla (debounce)
-- Las sugerencias se pueden recorrer con teclado (flechas, Enter, Escape) y presionar Enter sin elegir una sugerencia lleva a la página de resultados `/buscar?q=...`
+- Las sugerencias se pueden recorrer con teclado (flechas, Enter, Escape) y presionar Enter sin elegir una sugerencia lleva a la página de resultados `/search?q=...`
 
 ---
 
