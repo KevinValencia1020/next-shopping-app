@@ -1,6 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart, Menu } from 'lucide-react';
+
+interface Category {
+  name: string;
+  slug: string;
+}
+
+const categories: Category[] = [
+  { name: 'Televisores', slug: 'televisores' },
+  { name: 'Lavadoras', slug: 'lavadoras' },
+  { name: 'Neveras', slug: 'neveras' },
+  { name: 'Estufas', slug: 'estufas' },
+  { name: 'Tecnología', slug: 'tecnologia' },
+]
 
 const Header = () => {
   return (
@@ -30,16 +43,16 @@ const Header = () => {
           </form>
         </div>
 
-        <nav className='lg:flex items-center gap-4 hidden justify-between'>
-          <Link href='/login' className='text-white hover:text-gray-300 font-semibold'>
+        <nav aria-label='cuenta' className='lg:flex items-center gap-4 hidden justify-between'>
+          <Link href='/login' className='text-white hover:text-gray-300 font-semibold transition-colors duration-300 ease-in-out'>
             Hola, identifícate
           </Link>
 
-          <Link href='/orders' className='text-white hover:text-gray-300 font-semibold'>
+          <Link href='/orders' className='text-white hover:text-gray-300 font-semibold transition-colors duration-300 ease-in-out'>
             Mis Pedidos
           </Link>
 
-          <Link href='/cart' className='text-white hover:text-gray-300 flex items-center gap-1'>
+          <Link href='/cart' className='text-white hover:text-gray-300 flex items-center gap-1 transition-colors duration-300 ease-in-out'>
             <ShoppingCart size={20} />
             <span className='sr-only'>Carrito,</span>
             <span>0</span>
@@ -47,6 +60,33 @@ const Header = () => {
           </Link>
         </nav>
       </div>
+
+      <nav aria-label='categorías' className='lg:flex items-center hidden justify-evenly'>
+        <Link href='/category' className="flex items-center flex-row gap-2 text-white hover:text-gray-300 font-normal text-sm py-1 px-2 transition-colors duration-300 ease-in-out">
+          <Menu size={20}/>
+          Todas las categorías
+        </Link>
+
+        <Link href='/offers' className='text-white hover:text-gray-300 font-normal text-sm py-1 px-2 transition-colors duration-300 ease-in-out'>
+          Ofertas del día
+        </Link>
+        {
+          categories.map((category) => (
+            <Link
+              key={category.slug}
+              href={`/category/${category.slug}`}
+              className='text-white hover:text-gray-300 font-normal text-sm py-1 px-2 transition-colors duration-300 ease-in-out'
+            >
+              {category.name}
+            </Link>
+          ))
+        }
+
+        <Link href='/customer-service' className='text-white hover:text-gray-300 font-normal text-sm py-1 px-2 transition-colors duration-300 ease-in-out'>
+          Servicio al cliente
+        </Link>
+        
+      </nav>
     </header>
   );
 }
