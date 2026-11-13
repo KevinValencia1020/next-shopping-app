@@ -8,12 +8,12 @@ Enfoque de trabajo: **rebanadas verticales** (vertical slices). Cada historia de
 
 Tareas de scaffolding, no de una historia específica:
 
-- [ ] Configurar Tailwind con la paleta de colores y tipografía definida en `05-ui-ux.md`
-- [ ] Crear layout general vacío: header y navbar (componentes, sin datos reales todavía)
-- [ ] Configurar middlewares base en Express: `verificarJWT`, `verificarAdmin`
-- [ ] Configurar CORS con credenciales entre frontend y backend
-- [ ] Configurar conexión a Cloudinary
-- [ ] Configurar Resend para envío de correos
+- [x] Configurar Tailwind con la paleta de colores y tipografía definida en `05-ui-ux.md`
+- [x] Crear layout general vacío: header y navbar (componentes, sin datos reales todavía)
+- [x] Configurar middlewares base en Express: `verificarJWT`, `verificarAdmin`
+- [x] Configurar CORS con credenciales entre frontend y backend  (se valida con la página de registro)
+- ~~Configurar conexión a Cloudinary~~ -> Movido a HU-16
+- ~~Configurar Resend para envío de correos~~ -> Movido a HU-01
 
 ---
 
@@ -52,6 +52,12 @@ Sin esto, ninguna otra historia se puede probar de verdad.
 ### HU-19 — Productos similares
 - Backend: incluir productos de la misma categoría en la respuesta del detalle (máx. 10)
 - Frontend: sección de productos similares en el detalle
+
+### HU-20 — Navegar productos por categoría
+- Backend: `GET /api/categorias` — solo categorías con `isActive = true`
+- Backend: productos por categoría (slug), paginado por lotes de 20 (RNF-02) — reutilizar `GET /api/productos` con filtro de categoría (a confirmar al implementar)
+- Frontend: página `/category/[slug]` con `notFound()` para slug inexistente o inactivo
+- Frontend: el Header reemplaza el array de ejemplo de categorías por los datos del endpoint
 
 ---
 
@@ -128,6 +134,7 @@ feature/hu-16-admin-agregar-producto
 feature/hu-06-buscar-productos
 feature/hu-07-detalle-producto
 feature/hu-19-productos-similares
+feature/hu-20-navegar-por-categoria
 
 # Fase 3 — Interacción del cliente
 feature/hu-08-favoritos

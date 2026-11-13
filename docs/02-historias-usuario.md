@@ -240,3 +240,15 @@
 - Se muestra un máximo de 10 productos similares
 - Si no hay suficientes productos en la categoría, la sección se oculta o muestra menos de 10 (no se rellena con productos de otra categoría)
 - Cada tarjeta es clickeable y redirige al detalle de ese producto (mismo comportamiento que HU-07)
+
+### HU-20: Navegar productos por categoría
+**Como** cliente,
+**quiero** explorar los productos de una categoría,
+**para** ver todas las opciones disponibles cuando sé qué tipo de producto busco pero no cuál.
+
+**Criterios de aceptación:**
+- La página `/category/[slug]` muestra el nombre de la categoría y sus productos en tarjetas (mismo formato que los resultados de búsqueda de HU-06)
+- Los productos se cargan en lotes de 20 con el botón "Cargar más" en (RNF-02, igual que HU-06)
+- Si la categoría existe pero no tiene productos, se muestra un mensaje claro de "no hay productos en esta categoría"
+- Si el slug no existe, el servidor responde 404 y se muestra una página amigable de "categoría no encontrada"
+- Las categorías inactivas (`isActive = false`) no aparecen en el header, y acceder a su URL directamente se comporta igual que un slug inexistente
