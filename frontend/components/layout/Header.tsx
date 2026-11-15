@@ -17,7 +17,7 @@ const categories: Category[] = [
 
 const Header = () => {
   return (
-    <header className='w-full py-1 shadow-md bg-primario-oscuro rounded-b-2xl'>
+    <header className='w-full py-1 shadow-md bg-primario-oscuro rounded-b-2xl shrink-0'>
       <div className='w-[90%] my-0 mx-auto flex items-center justify-between gap-3'>
         <div>
           <Link href='/'>

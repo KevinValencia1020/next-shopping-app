@@ -21,9 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">
+      <body className="h-dvh flex flex-col">
         <Header />
-        {children}
+        <main className="flex-1 min-h-0 overflow-y-auto flex flex-col">
+          {children}
+        </main>
         <Navbar />
       </body>
     </html>
