@@ -38,7 +38,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className='z-50 lg:hidden shrink-0'>
+    <nav className='lg:hidden shrink-0'>
       <ul className='flex justify-around items-center w-full h-16 bg-primario-oscuro text-white'>
         {navItems.map((item) => {
           const isActive = pathname === item.href;
